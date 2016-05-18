@@ -1,47 +1,73 @@
+ruby '2.3.0'
+
+# Primary source
 source 'https://rubygems.org'
 
+# Other sources
+source 'https://rails-assets.org' do
+  gem 'rails-assets-bootstrap-sass'
+end
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.2.6'
-# Use sqlite3 as the database for Active Record
-gem 'sqlite3'
-# Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
-# Use Uglifier as compressor for JavaScript assets
+# Core gems
+gem 'rails', '>= 5.0.0.beta4', '< 5.1'
+gem 'pg', '>= 0.19.0.beta'
+gem 'puma', '~> 3.0'
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
+gem 'sass-rails', '~> 5.0'
 gem 'coffee-rails', '~> 4.1.0'
-# See https://github.com/rails/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
-
-# Use jquery as the JavaScript library
-gem 'jquery-rails'
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-gem 'turbolinks'
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
+gem 'turbolinks', '~> 5.x'
 gem 'jbuilder', '~> 2.0'
-# bundle exec rake doc:rails generates the API under doc/api.
-gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'bower-rails', '~> 0.10.0'
+gem 'jquery-rails'
+gem 'simple_form', github: 'kesha-antonov/simple_form', branch: 'rails-5-0'
+gem 'reform'
+gem 'reform-rails'
+gem 'draper', git: 'https://github.com/coderdan/draper.git'
+gem 'devise'
+gem 'cf-app-utils' # cloudfoundry utils 
+gem 'rails_serve_static_assets' # http://docs.cloudfoundry.org/buildpacks/ruby/ruby-tips.html#rails-4
+gem 'rails_12factor'
+gem 'refile', require: ['refile/rails', 'refile/image_processing']
+gem 'mini_magick'
+gem 'friendly_id', github: 'norman/friendly_id', ref: '8531cdce'
+gem 'acts_as_tree', '~> 2.4.0'
+gem 'haml', '~> 4.0.7'
+gem 'httparty',  '~> 0.13.0'
+gem 'nokogiri', '1.6.8.rc3'
+gem 'hashie'
+gem 'odyssey'
+gem 'rollbar'
+gem 'oj', '~> 2.12.14'
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+#TODO switch to thoughtbot's latest release once PRs are merged & released:
+# - https://github.com/thoughtbot/administrate/pull/580 # sidebar config
+# - https://github.com/thoughtbot/administrate/pull/575 # Rails 5
+gem 'administrate', github: 'micapam/administrate', branch: 'govau'
 
-# Use Unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
-
-group :development, :test do
-  # Call 'byebug' anywhere in the code to stop execution and get a debugger console
-  gem 'byebug'
-end
-
-group :development do
-  # Access an IRB console on exception pages or by using <%= console %> in views
-  gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+group :development do 
+  gem 'web-console', '~> 3.0'
+  gem 'byebug', platform: :mri
   gem 'spring'
+  gem 'spring-watcher-listen', '~> 2.0.0'
 end
 
+group :test, :development do 
+  gem 'rspec-rails', '>= 3.5.0.beta3'
+  gem 'spinach', '~> 0.8.10'
+  gem 'fabrication', '~> 2.15.0'
+  gem 'faker', '~> 1.6.3'
+  gem 'webmock', '~> 2.0.1'
+  gem 'simplecov', '~> 0.11.2'
+  gem 'capybara', '~> 2.7'
+end
+
+group :test do 
+  gem 'shoulda-matchers', '~> 3.1'
+  gem 'rails-controller-testing', '~> 0.1.1'
+  gem 'database_cleaner', '~> 1.5.3'
+end
+
+platforms :mingw, :mswin do
+  gem 'tzinfo-data'
+  gem 'wdm'
+end

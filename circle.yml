@@ -17,4 +17,4 @@ deployment:
       - cf auth $CF_STAGING_USER $CF_STAGING_PASSWORD
       - cf target -o dto -s dtomisc
       - cf apps
-      - cf push gov-au-beta-content-authoring
+      - cf push gov-au-beta-content-analysis

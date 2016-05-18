@@ -3,10 +3,16 @@ class Api::LintersController < ApplicationController
 
 
   def parse
-    if content = params['content']
-      @results = ContentLinter.new(content).parse
+    if @content = params['content']
+      @results = ContentLinter.new(@content).parse
     else
       head :bad_request
     end
+
+    respond_to do |format|
+      format.json
+      format.html { render layout: false }
+    end
+
   end
 end

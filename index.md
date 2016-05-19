@@ -8,16 +8,15 @@ To be filled in
 
 # Methods
 
-## 1. linters
+## 1. Content linting
+
+### `/api/linters`
 
 Search a chunk of text for words which are discouraged from use.
 
-### Request
+### Request  
 
-| Method  | URL          |
-|---------|--------------|
-| POST | /api/linters |
-
+**POST** 
 
 | Type | Params  | Values |
 |------|---------|--------|
@@ -32,9 +31,11 @@ Search a chunk of text for words which are discouraged from use.
 
 ## 2. content quality
 
+### `/api/quality`
+
 Provides a quality score for a chunk of text based on the Flesch Kincaid algorithm.
 
-### Request - /api/quality
+### Request
 
 | Method  | URL          |
 |---------|--------------|

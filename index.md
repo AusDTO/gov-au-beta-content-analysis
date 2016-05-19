@@ -1,20 +1,15 @@
----
-title: API Specification [DRAFT]
----
+# Content Analysis - Draft API Specification
 
-# Table of contents
-
-To be filled in 
-
-# Methods
-
-## 1. Content linting
-
-### `/api/linters`
+## 1. /api/linters(.html)
 
 Search a chunk of text for words which are discouraged from use.
 
-### Request  
+
+### POST
+  
+**Parameters**: 
+
+ - `(string)` content
 
 **POST** 
 

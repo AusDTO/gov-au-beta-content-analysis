@@ -22,6 +22,7 @@ RSpec.describe 'linting', type: :request do
     end
 
     it 'should return HTML if HTML header' do
+      pending('respecting JSON default and Accept headers')
       post '/api/linters', params: {content: 'words'}, headers: {'HTTP_ACCEPT' => 'text/html'}
       expect(response).to be_success
       expect { JSON.load(response.body) }.to raise_error

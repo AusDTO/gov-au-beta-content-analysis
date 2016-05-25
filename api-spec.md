@@ -6,11 +6,9 @@ The Content Analysis Service (CAS) must be exposed via a versionable API so that
 requests with content payloads. It must return a response to the client in the context of the content payload and 
 provide relevant metadata including its publishable state.
 
-The CAS should be comprised of distinct content services that assess the content in different ways. The CAS
-should not be a single all-in-one service, though it may expose helper endpoints to aggregate the different
-services in a single response. Each of the analysis services should be accessible individually.
-
-CAS is not a stateful service, although it may resemble a RESTful architecture in some aspects of its vision.
+The CAS must be comprised of distinct content services that assess the content in different ways. The CAS
+must not be a single all-in-one service, though it may expose helper endpoints to aggregate the different
+services into a single response. Each of the analysis services must be accessible individually.
 
 
 ## High-level principles for analysis services

@@ -1,5 +1,11 @@
 # Content Analysis - Draft API Specification
 
+
+
+
+
+
+
 ## 1. /api/linters(.html)
 
 Search a chunk of text for words which are discouraged from use.

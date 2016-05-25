@@ -64,3 +64,31 @@ A response payload looks like:
     error:
 }
 ```
+
+
+## Example service
+
+# Show bad words
+----
+
+Returns a json dictionary listing the bad words found in content, associated with arrays of suggested good words.
+
+* **URL**  
+
+    /api/linters
+  
+* **Method**
+  
+    `POST`
+ 
+* **Parameters**
+
+    HEAD: `content=[String]`
+
+* **Response**
+
+    * **Success: 200**  
+    **Response:** `{ "bad_word": ["suggested", "words"] }`
+    
+    * **Bad request: 400**  
+    **Response:** `{ error: "No content provided." }`

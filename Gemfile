@@ -38,6 +38,7 @@ gem 'hashie'
 gem 'odyssey'
 gem 'rollbar'
 gem 'oj', '~> 2.12.14'
+gem 'graphql'
 
 #TODO switch to thoughtbot's latest release once PRs are merged & released:
 # - https://github.com/thoughtbot/administrate/pull/580 # sidebar config
@@ -59,6 +60,7 @@ group :test, :development do
   gem 'webmock', '~> 2.0.1'
   gem 'simplecov', '~> 0.11.2'
   gem 'capybara', '~> 2.7'
+  gem 'pry'
 end
 
 group :test do 

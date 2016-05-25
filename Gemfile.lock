@@ -104,6 +104,7 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     cf-app-utils (0.6)
+    coderay (1.1.0)
     coffee-rails (4.1.1)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0, < 5.1.x)
@@ -142,6 +143,7 @@ GEM
     gherkin-ruby (0.3.2)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    graphql (0.13.0)
     haml (4.0.7)
       tilt
     hashdiff (0.3.0)
@@ -193,6 +195,10 @@ GEM
     orm_adapter (0.5.0)
     pg (0.19.0.pre20160409114042)
     pkg-config (1.1.7)
+    pry (0.10.2)
+      coderay (~> 1.1.0)
+      method_source (~> 0.8.1)
+      slop (~> 3.4)
     puma (3.4.0)
     rack (2.0.0.rc1)
       json
@@ -293,6 +299,7 @@ GEM
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
     simplecov-html (0.10.0)
+    slop (3.6.0)
     spinach (0.8.10)
       colorize
       gherkin-ruby (>= 0.3.2)
@@ -352,6 +359,7 @@ DEPENDENCIES
   fabrication (~> 2.15.0)
   faker (~> 1.6.3)
   friendly_id!
+  graphql
   haml (~> 4.0.7)
   hashie
   httparty (~> 0.13.0)
@@ -362,6 +370,7 @@ DEPENDENCIES
   odyssey
   oj (~> 2.12.14)
   pg (>= 0.19.0.beta)
+  pry
   puma (~> 3.0)
   rails (>= 5.0.0.beta4, < 5.1)
   rails-assets-bootstrap-sass!
@@ -391,4 +400,4 @@ RUBY VERSION
    ruby 2.3.0p0
 
 BUNDLED WITH
-   1.12.3
+   1.12.4

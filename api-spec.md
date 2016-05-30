@@ -83,7 +83,7 @@ Returns a json dictionary listing the bad words found in content, associated wit
  
 * **Parameters**
 
-    HEAD: `content=[String]`
+    POST: `content=[String]`
 
 * **Response**
 

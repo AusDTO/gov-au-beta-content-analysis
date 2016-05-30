@@ -3,8 +3,6 @@ This project provides the content analysis API for the GOV.AU content site.
 
 The API Specification draft can be found [here](./api-spec.md)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
 [![CircleCI](https://circleci.com/gh/AusDTO/gov-au-beta-content-analysis/tree/develop.svg?style=svg)](https://circleci.com/gh/AusDTO/gov-au-beta-content-analysis/tree/develop)
 
 ## Local Ruby on Rails development environment on Mac OSX

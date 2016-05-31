@@ -29,6 +29,7 @@ SimpleCov.start :rails do
   add_filter do |source_file|
     source_file.lines.count < 3
   end
+  minimum_coverage 100
 end
 RSpec.configure do |config|
   # rspec-expectations config goes here. You can use an alternate

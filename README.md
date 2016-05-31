@@ -3,6 +3,12 @@ This project provides the content analysis API for the GOV.AU content site.
 
 [![CircleCI](https://circleci.com/gh/AusDTO/gov-au-beta-content-analysis/tree/develop.svg?style=svg)](https://circleci.com/gh/AusDTO/gov-au-beta-content-analysis/tree/develop)
 
+## GOV.AU stack
+If you're contributing to this repo, then you'll most likely be contributing to the other GOV.AU repos in the stack:
+
+* [GOV.AU Beta Frontend](https://github.com/AusDTO/gov-au-beta)
+* [Experimental GOV.AU Authoring Tool](https://github.com/AusDTO/gov-au-beta-authoring)
+
 ## Local Ruby on Rails development environment on Mac OSX
 ```
 #install homebrew

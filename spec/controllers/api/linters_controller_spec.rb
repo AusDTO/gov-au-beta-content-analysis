@@ -18,7 +18,7 @@ RSpec.describe Api::LintersController do
             post :parse, :params => {:content => "Federal Government"}, :format => 'html'
         ).to be_success
 
-        expect(response.body).to match /title='Australian Government'/
+        expect(response.body).to match /title="Australian Government"/
       end
 
     end
@@ -37,7 +37,7 @@ RSpec.describe Api::LintersController do
           post :parse, :params => {:content => "No bad words here"}, :format => 'html'
         ).to be_success
 
-        expect(response.body).to_not match /title='/
+        expect(response.body).to_not match /title="/
       end
     end
 
@@ -46,6 +46,16 @@ RSpec.describe Api::LintersController do
         expect(
             post :parse, :format => 'json'
         ).to_not be_success
+      end
+    end
+
+    context "given content with script tags" do
+      it "no script tags are returned" do
+        expect(
+            post :parse, params: {content: 'Stuff<script>doStuff();</script>'}, :format => 'html'
+        ).to be_success
+        expect(response.body).to_not match /script/
+        expect(response.body).to match 'Stuff'
       end
     end
   end

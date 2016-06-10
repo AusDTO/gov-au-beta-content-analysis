@@ -58,3 +58,16 @@ cf push -i 1 -u none -c "bundle exec rake db:schema:load db:seed"
 cf set-env gov-au-beta-content-analysis SECRET_KEY_BASE `rails secret`
 cf set-env gov-au-beta-content-analysis ROLLBAR_ACCESS_TOKEN aabcc
 ```
+
+# Pull request approvals
+Maintainers who can approve PRs on this repo are stored within MAINTAINERS. The minimum
+number of approvers by default is 2. A PR will *not* be able to merge without the required
+number of approvals.
+
+## Providing approval
+If you are reviewing a PR, you should assign it to yourself so that people are aware of who
+is reviewing the branch. Once you are satisfied that the PR is in a mergeable state, and
+have no follow-up comments to make, you should comment with 'LGTM'.
+
+You should **not** comment with 'LGTM' in any of your comments _unless_ you are intending
+to approve the PR for merge, as the branch protection will look for this explicitly.
